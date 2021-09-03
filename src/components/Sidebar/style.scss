@@ -1,0 +1,184 @@
+.side-pack{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100px;
+    background: #242945;
+     height:fit-content ;
+    //  color: white;
+    .side-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 90%;
+        margin-bottom: 50px;
+        .logo-cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;}
+    }
+   
+        .side-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // align-items: center;
+            width: 100%;
+            .side-menu{
+                display: flex;
+                flex-direction: row;
+                // align-items: center;
+                // justify-content: right;
+                justify-content: space-around;
+                width: 100%;
+                padding:10px 20px ;
+                border-radius: 5px;
+                
+                
+                .profile-photo{
+                    .img{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 30px;
+                    }
+                }
+                .img{
+                    width: 30px;
+                    height: 30px;
+                }
+                .profile-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: baseline;
+                    width: 54%;
+                    .profile-icon-cont{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        .profile-icon{
+                            width: 16px;
+                            margin: 3px 5px;
+    
+                        }
+                    }
+                }
+                .span{
+                    width: 60%;
+                }
+                
+            }
+        }
+    .pack{display: none;}
+    }
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+    background: #242945;
+     height:fit-content ;
+     color: white;
+    .side-top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 90%;
+        margin-bottom: 50px;
+        .logo-cont{
+            display: flex;
+justify-content: center;
+align-items: center;
+.logo-txt{
+    font-size: 24px;
+    font-weight: bold;
+}
+        }
+        .pack-switch{
+            .rectangle{
+                width: 38px;
+    height: 15px;
+    background-color: gray;
+    /* height: 3px; */
+    border-radius: 6px;
+            }
+            .square{
+                width: 23px;
+                 height: 23px;
+                  border-radius: 23px;
+                   position: absolute;
+                    top: 16px; 
+                    background-color: #c7c4c4;
+                     left: 18px;
+
+            }
+      
+        }
+
+    }
+    .side-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        width: 100%;
+        .side-menu{
+            display: flex;
+            flex-direction: row;
+            // align-items: center;
+            // justify-content: right;
+            justify-content: space-around;
+            width: 100%;
+            padding:10px 20px ;
+            border-radius: 5px;
+            &:hover{
+                background-color: rgb(255, 153, 0);
+            }
+            .profile-photo{
+                .img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                }
+            }
+            .img{
+                width: 30px;
+                height: 30px;
+            }
+            .profile-content{
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                width: 54%;
+                .profile-icon-cont{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    .profile-icon{
+                        width: 16px;
+                        margin: 3px 5px;
+
+                    }
+                }
+            }
+            .span{
+                width: 60%;
+            }
+            
+        }
+    }
+}
+.active{
+    background-color: rgb(255, 153, 0);
+}
+// .pack{display: none;}

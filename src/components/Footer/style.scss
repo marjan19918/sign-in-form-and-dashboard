@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    background-color: #242945;
+    color: white;
+    .div{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        font-size: 12px;
+        .bold{
+            font-weight: bold;
+        }
+
+    }
+}
