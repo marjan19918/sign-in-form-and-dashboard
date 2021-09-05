@@ -6,6 +6,7 @@ import logo from '../../assets/png/logo-type.png'
 import InputFeild from '../../components/Input-Feild'
 import CostomButton from '../../components/Button'
 import letter from '../../assets/svg/mail.svg'
+import TimerCountDown from '../../components/Timer-CountDown'
 const RegisterOtp = () => {
     const [otpCode, setOtpCode] = useState('')
     const handleSubmit=(e)=>{e.preventDefault();
@@ -37,10 +38,10 @@ const RegisterOtp = () => {
                          />
                      </div>
                      <div className='timer-container'>
-                     
+                     <TimerCountDown />
                      </div>
                      <div className='Button-container' >
-                         <CostomButton  buttonText="تایید" type='submit'  />
+                         <CostomButton disable={otpCode.length<6} buttonText="تایید" type='submit'  />
                      </div>
                      
                  </form>

@@ -7,6 +7,7 @@ import InputFeild from '../../components/Input-Feild'
 import CostomButton from '../../components/Button'
 import letter from '../../assets/svg/mail.svg'
 import lock from '../../assets/svg/lock.svg'
+import TimerCountDown from '../../components/Timer-CountDown'
 const ForgetPasswordChange = () => {
     const [otpCode, setOtpCode] = useState('')
     const [password, setPassword] = useState('')
@@ -39,7 +40,8 @@ const ForgetPasswordChange = () => {
                                  inputalt='letter'
                         />
                     </div>
-                    <div className='timer-container'>
+                                <div className='timer-container'>
+                                    <TimerCountDown/>
 
                     </div>
                        
@@ -73,7 +75,7 @@ const ForgetPasswordChange = () => {
                         </div>
                       
                         <div className='Button-container' >
-                            <CostomButton  buttonText="تایید" type='submit'  />
+                                    <CostomButton disable={otpCode.length < 6 ||password.length< 6 || repassword.length<6} buttonText="تایید" type='submit'  />
                         </div>
                         
                     </form>

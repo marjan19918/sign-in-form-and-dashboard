@@ -19,23 +19,27 @@ const Register = () => {
     async function handleSubmit(e) {
        e.preventDefault();
       
-         const data = await fetch(`https://cors-anywhere.herokuapp.com/https://accounting.persianspeech.com/account/signup/phone?username=${acountName}&phone=${phoneNumber}&password=${password}&password_confirmation=${repassword}`
-            )
-        // const datas = fetch('https://cors-anywhere.herokuapp.com/https://accounting.persianspeech.com/account/signup/email',
-        // {
-        //     method: 'post',
-        //     headers: {
-        //       Accept: 'application/json',
-        //       'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //       username: acountName,
-        //       phone:phoneNumber,
-        //         password: password,
-        //       password_confirmation:repassword
-        //     })
-        //   })
-    const  hy = await data
+        // const data = await fetch(`https://cors-anywhere.herokuapp.com/
+        //  https://accounting.persianspeech.com/account/signup/email?username=${acountName}&phone=${phoneNumber}&password=${password}&password_confirmation=${repassword}`
+        //     )
+        const datas = fetch('https://cors-anywhere.herokuapp.com/https://accounting.persianspeech.com/account/signup/email',
+            {
+                //  credentials: 'include',
+            method: 'post',
+            //     headers: {
+            //         // Access_Control_Allow_Origin: "*",
+            //     // 'Content-Type': 'text/plain'
+            // //    Accept: 'application/json',
+            //    'Content-Type': 'application/json'
+            // },
+            body: JSON.stringify({
+              username: acountName,
+              phone:phoneNumber,
+                password: password,
+              password_confirmation:repassword
+            })
+          })
+    const  hy = await datas
       console.log(hy)
  }
     return (
@@ -110,7 +114,7 @@ const Register = () => {
                        <p className='text-p'>ایا پیش از این ثبت نام کرده اید؟<Link to='/' className='purple '>صفحه ورود</Link></p> 
                         </div>
                         <div className='Button-container' >
-                            <CostomButton  buttonText='ورود' type='submit'  />
+                            <CostomButton disable={password.length<6|| repassword.length<6 || acountName.length<8 ||phoneNumber.length<11 }  buttonText='ورود' type='submit'  />
                         </div>
                         
                     </form>

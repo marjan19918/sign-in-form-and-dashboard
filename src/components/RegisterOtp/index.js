@@ -4,6 +4,7 @@ import letter from '../../assets/svg/mail.svg'
 import InputFeild from '../Input-Feild'
 import CostomButton from '../Button'
 import logo from '../../assets/png/logo-type.png'
+import TimerCountDown from '../Timer-CountDown'
 const RegisterOtp = () => {
     const [otpCode, setOtpCode] = useState('')
     const handleSubmit=(e)=>{e.preventDefault();
@@ -30,7 +31,7 @@ const RegisterOtp = () => {
                          />
                      </div>
                      <div className='timer-container'>
-                     
+                     <TimerCountDown />
                      </div>
                      <div className='Button-container' >
                          <CostomButton  buttonText="تایید" type='submit'  />

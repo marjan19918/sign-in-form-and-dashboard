@@ -59,7 +59,7 @@ const ForgetPassword = () => {
                     <p className='text-p'> بازگشت به<Link className='purple ' to='/' >صفحه ورود </Link></p> 
                      </div>
                      <div className='Button-container' >
-                         <CostomButton  buttonText='در یافت کد تایید' type='submit'  />
+                         <CostomButton disable={acountName.length<8||phoneNumber.length<11} buttonText='در یافت کد تایید' type='submit'  />
                      </div>
                      
                  </form>

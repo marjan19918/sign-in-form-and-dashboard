@@ -6,10 +6,12 @@ import dollar from '../../assets/svg/dollar-symbol-on-circle.svg'
 import logout from '../../assets/svg/logout.svg'
  import Modal from '../Modal/index'
  import Payment from '../Payment'
-const Header = ({ open,handleOpen,profilephoto, credit }) => {
+import { useHistory } from 'react-router'
+const Header = ({handleOpen,profilephoto, credit }) => {
     const [toggleMenu, setToggleMenu] = useState(false)
-    const [modalOpen,setModalOpen]=useState(false)
-    const profileContent=[{img:home,text:'خانه'},{img:user,text:'پروفایل'},{img:logout,text:'خروج'}]
+    const [modalOpen, setModalOpen] = useState(false)
+    const history=useHistory()
+    const profileContent=[{img:home,text:'خانه'},{img:user,text:'پروفایل' ,history:'dashboard/profile'},{img:logout,text:'خروج'}]
     return (
         <div className='header'>
            
@@ -23,7 +25,9 @@ const Header = ({ open,handleOpen,profilephoto, credit }) => {
                      {
                          toggleMenu === true ?
                              <div className='profile-menue'>
-                         {profileContent.map(profile=>{return(<div className='profile-menue-row' ><img className='img' src={profile.img} /><span> {profile.text}</span></div>)})}
+                                {profileContent.map(profile => {
+                                    return (<div  className='profile-menue-row' ><img className='img' src={profile.img} /><span> {profile.text}</span></div>)
+                                })}
                          
                      
                  </div> : null

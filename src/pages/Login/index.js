@@ -11,7 +11,9 @@ import { Link } from 'react-router-dom'
 const Login = () => {
     const [phoneNumber, setPhoneNumber] = useState('')
     const [password, setPassword] = useState('')
+   
     async function handleSubmit(e) {
+        
        e.preventDefault();
        console.log(phoneNumber)
         let data = await fetch(`https://accounting.persianspeech.com/account/login?username=${phoneNumber}&password=${password}`)
@@ -64,7 +66,7 @@ const Login = () => {
                         </div>
                                 <div className='Button-container' >
                                     <Link to=''>
-                                    <CostomButton  buttonText='ورود' type='submit'  /> 
+                                    <CostomButton disable={phoneNumber.length<11 || password.length<6}  buttonText='ورود' type='submit'  /> 
                                     </Link>
                             {/* <CostomButton  buttonText='ورود' type='submit'  /> */}
                         </div>
